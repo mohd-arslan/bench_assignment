@@ -4,10 +4,10 @@ FROM openjdk:8
 WORKDIR /app
 
 # Copy the JAR file into the container
-COPY /target/*.jar app.jar
+COPY /target/*.war app.war
 
 # Expose any necessary ports (if required by your application)
 EXPOSE 8083
 
 # Specify the command to run your application
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "app.war"]
